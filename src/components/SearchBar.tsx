@@ -7,7 +7,6 @@ import {
   ListItem,
   ListItemText,
   InputAdornment,
-  IconButton,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { Doctor } from "../types/doctor";
@@ -102,9 +101,9 @@ const SearchBar = ({ doctors, onSearch }: SearchBarProps) => {
               <ListItem
                 key={doctor.id}
                 data-testid="suggestion-item"
-                button
                 onClick={() => handleSearch(doctor.name)}
                 sx={{
+                  cursor: "pointer",
                   "&:hover": {
                     backgroundColor: "action.hover",
                   },
