@@ -101,6 +101,7 @@ const SearchBar = ({ doctors, onSearch }: SearchBarProps) => {
               <ListItem
                 key={doctor.id}
                 data-testid="suggestion-item"
+                component="div"
                 onClick={() => handleSearch(doctor.name)}
                 sx={{
                   cursor: "pointer",
